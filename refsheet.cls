@@ -14,7 +14,6 @@
 
 \LoadClass{article}[2018/08/24]
 
-\RequirePackage{fixltx2e}
 \RequirePackageWithOptions{nag}[2018/08/24 orthodox,l2tabu,abort]
 \RequirePackage{etoolbox}
 
