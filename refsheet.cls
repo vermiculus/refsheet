@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{refsheet}[2013/02/25 Reference Sheet Class]
+\ProvidesClass{refsheet}[2018/08/24 Reference Sheet Class]
 
 
 \newcommand{\refsheet@columns}{3}
@@ -12,22 +12,21 @@
 
 \ProcessOptions
 
-\LoadClass{article}[2013/02/25]
+\LoadClass{article}[2018/08/24]
 
 \RequirePackage{fixltx2e}
-\RequirePackageWithOptions{nag}[2013/03/25 othodox,l2tabu,abort]
+\RequirePackageWithOptions{nag}[2018/08/24 orthodox,l2tabu,abort]
+\RequirePackage{etoolbox}
 
 %% Page layout
 
-\RequirePackage{geometry}[2013/03/25]
-%\usepackage[landscape,margin=0.5in]{geometry}
+\RequirePackage{geometry}[2018/08/24]
 \geometry{landscape,margin=0.5in}
 \RequirePackage{multicol}
 
 
 %% Title area
 
-% \RequirePackage{titling} % Unnecessary
 \renewcommand{\maketitle}{%
   {\begin{center}\Large \@title \\ \vspace{4pt} \small \@author, \@date\end{center}}%
 }
@@ -53,5 +52,5 @@
 \newlist{ttdesc}{description}{1}
 \setlist[ttdesc]{font=\ttfamily,noitemsep}
 
-\AtBeginDocument{\begin{multicols}{\refsheet@columns}}
+\AfterEndPreamble{\begin{multicols}{\refsheet@columns}}
 \AtEndDocument{\end{multicols}}
