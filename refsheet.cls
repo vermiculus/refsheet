@@ -1,6 +1,6 @@
 %&tex
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{refsheet}[2018/08/24 v1.0dev Reference Sheet Class]
+\ProvidesClass{refsheet}[2018/08/29 v1.0 Reference Sheet Class]
 
 %%% OPTION DEFINITIONS
 %
